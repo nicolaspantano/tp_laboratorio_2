@@ -1,0 +1,10 @@
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\MiCalculadora\bin\Debug\MiCalculadora.exe.config
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\MiCalculadora\bin\Debug\MiCalculadora.exe
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\MiCalculadora\bin\Debug\MiCalculadora.pdb
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\MiCalculadora\obj\Debug\MiCalculadora.csprojResolveAssemblyReference.cache
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\MiCalculadora\obj\Debug\MiCalculadora.FormCalculadora.resources
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\MiCalculadora\obj\Debug\MiCalculadora.Properties.Resources.resources
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\MiCalculadora\obj\Debug\MiCalculadora.csproj.GenerateResource.Cache
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\MiCalculadora\obj\Debug\MiCalculadora.csproj.CoreCompileInputs.cache
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\MiCalculadora\obj\Debug\MiCalculadora.exe
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\MiCalculadora\obj\Debug\MiCalculadora.pdb

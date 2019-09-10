@@ -3773,11 +3773,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Compumar\\Desktop\\Tp01.Pantano.Nicolas\\Entidades\\Entidades.csproj",
+      "projectUniqueName": "C:\\Users\\Compumar\\Desktop\\tp_laboratorio_2\\Tp01.Pantano.Nicolas\\Entidades\\Entidades.csproj",
       "projectName": "Entidades",
-      "projectPath": "C:\\Users\\Compumar\\Desktop\\Tp01.Pantano.Nicolas\\Entidades\\Entidades.csproj",
+      "projectPath": "C:\\Users\\Compumar\\Desktop\\tp_laboratorio_2\\Tp01.Pantano.Nicolas\\Entidades\\Entidades.csproj",
       "packagesPath": "C:\\Users\\Compumar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Compumar\\Desktop\\Tp01.Pantano.Nicolas\\Entidades\\obj\\",
+      "outputPath": "C:\\Users\\Compumar\\Desktop\\tp_laboratorio_2\\Tp01.Pantano.Nicolas\\Entidades\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Compumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
