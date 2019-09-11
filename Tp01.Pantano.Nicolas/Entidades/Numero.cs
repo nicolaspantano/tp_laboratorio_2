@@ -70,14 +70,15 @@ namespace Entidades
         {
             string binario = "";
 
+            int numeroEntero=(int)numero;
             if (numero == 0)
             {
                 return "0";
             }
 
-            while (numero >= 1)
+            while (numeroEntero >= 1)
             {
-                if (numero % 2 == 0)
+                if (numeroEntero % 2 == 0)
                 {
                     binario = "0" + binario;
                 }
@@ -86,7 +87,7 @@ namespace Entidades
                     binario = "1" + binario;
                 }
 
-                numero = (int)numero / 2;
+                numeroEntero = numeroEntero / 2;
             }
 
 

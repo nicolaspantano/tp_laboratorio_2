@@ -61,7 +61,7 @@
             // 
             // btnConvertirABinario
             // 
-            this.btnConvertirABinario.Location = new System.Drawing.Point(202, 204);
+            this.btnConvertirABinario.Location = new System.Drawing.Point(12, 199);
             this.btnConvertirABinario.Name = "btnConvertirABinario";
             this.btnConvertirABinario.Size = new System.Drawing.Size(184, 38);
             this.btnConvertirABinario.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             // btnConvertirADecimal
             // 
-            this.btnConvertirADecimal.Location = new System.Drawing.Point(12, 204);
+            this.btnConvertirADecimal.Location = new System.Drawing.Point(202, 199);
             this.btnConvertirADecimal.Name = "btnConvertirADecimal";
             this.btnConvertirADecimal.Size = new System.Drawing.Size(184, 38);
             this.btnConvertirADecimal.TabIndex = 3;
@@ -126,9 +126,9 @@
             // lblResultado
             // 
             this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado.Location = new System.Drawing.Point(166, 9);
+            this.lblResultado.Location = new System.Drawing.Point(72, 9);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(215, 33);
+            this.lblResultado.Size = new System.Drawing.Size(309, 33);
             this.lblResultado.TabIndex = 9;
             this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
