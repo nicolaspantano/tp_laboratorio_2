@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Entidades
 {
-    class Calculadora
+    public class Calculadora
     {
         public static double Operar(Numero num1, Numero num2, string operador)
         {
@@ -12,8 +12,8 @@ namespace Entidades
 
             switch (operador)
             {
-                case "+":
-                    return num1 + num2;
+                case "*":
+                    return num1 * num2;
                     
 
                 case "-":
@@ -24,9 +24,9 @@ namespace Entidades
                     return num1 / num2;
 
 
-                    //*
+                    //+
                 default:
-                    return num1 * num2;
+                    return num1 + num2;
                     
 
 

@@ -6,9 +6,9 @@ namespace Entidades
     {
         private double numero;
 
-        public Numero()
+        public Numero() : this(0)
         {
-            this.numero = 0;
+            
         }
 
         public Numero(double numero)
@@ -18,7 +18,7 @@ namespace Entidades
 
         public Numero(string strNumero)
         {
-            this.numero = double.Parse(strNumero);
+            this.SetNumero = strNumero;
         }
 
         private double ValidarNumero(string strNumero)
@@ -34,9 +34,9 @@ namespace Entidades
             }
         }
 
-        public double SetNumero
+        public string SetNumero
         {
-            set { this.numero = value; }
+            set { this.numero = ValidarNumero(value); }
         }
 
         public static double operator +(Numero num1,Numero num2)
@@ -90,7 +90,7 @@ namespace Entidades
 
         public static string DecimalBinario(string numero)
         {
-            string binario = "";
+            
             double convertido;
 
 

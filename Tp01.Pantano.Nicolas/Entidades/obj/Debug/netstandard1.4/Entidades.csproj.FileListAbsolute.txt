@@ -1,0 +1,9 @@
+C:\Users\alumno\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\bin\Debug\netstandard1.4\Entidades.deps.json
+C:\Users\alumno\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\bin\Debug\netstandard1.4\Entidades.dll
+C:\Users\alumno\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\bin\Debug\netstandard1.4\Entidades.pdb
+C:\Users\alumno\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\obj\Debug\netstandard1.4\Entidades.csprojAssemblyReference.cache
+C:\Users\alumno\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\obj\Debug\netstandard1.4\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\alumno\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\obj\Debug\netstandard1.4\Entidades.AssemblyInfoInputs.cache
+C:\Users\alumno\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\obj\Debug\netstandard1.4\Entidades.AssemblyInfo.cs
+C:\Users\alumno\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\obj\Debug\netstandard1.4\Entidades.dll
+C:\Users\alumno\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\obj\Debug\netstandard1.4\Entidades.pdb
