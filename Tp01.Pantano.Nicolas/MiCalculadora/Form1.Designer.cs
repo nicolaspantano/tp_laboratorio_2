@@ -130,7 +130,6 @@
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(215, 33);
             this.lblResultado.TabIndex = 9;
-            this.lblResultado.Text = "123123";
             this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FormCalculadora

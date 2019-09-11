@@ -52,7 +52,7 @@ namespace Entidades
         {
             if (num2.numero != 0)
             {
-                return num1.numero + num2.numero;
+                return num1.numero / num2.numero;
 
             }
             else
@@ -70,7 +70,12 @@ namespace Entidades
         {
             string binario = "";
 
-            while (numero > 1)
+            if (numero == 0)
+            {
+                return "0";
+            }
+
+            while (numero >= 1)
             {
                 if (numero % 2 == 0)
                 {
@@ -81,7 +86,7 @@ namespace Entidades
                     binario = "1" + binario;
                 }
 
-                numero = numero / 2;
+                numero = (int)numero / 2;
             }
 
 
@@ -92,16 +97,25 @@ namespace Entidades
         {
             
             double convertido;
-
+            
 
             if (double.TryParse(numero, out convertido))
             {
-                return DecimalBinario(convertido);
+                if(convertido < 0)
+                {
+                    return "Valor invalido";
+                }
+                else
+                {                    
+                    return DecimalBinario(convertido);
+                }
+                
             }
             else
             {
                 return "Valor invalido";
             }
+            
 
            
         }
@@ -119,17 +133,10 @@ namespace Entidades
 
                 if (binario[i] == '1')
                 {
-                    if (i == (binario.Length) - 1)
-                    {
-                        doble += 1;
-                        continue;
-
-                    }
-                    else
-                    {
+                    
                         doble += Math.Pow(2, exponente);
 
-                    }
+                    
 
                 }
 
