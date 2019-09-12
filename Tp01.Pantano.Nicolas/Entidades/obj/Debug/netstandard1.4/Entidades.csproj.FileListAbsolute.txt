@@ -7,3 +7,11 @@ C:\Users\alumno\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\obj\Debu
 C:\Users\alumno\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\obj\Debug\netstandard1.4\Entidades.AssemblyInfo.cs
 C:\Users\alumno\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\obj\Debug\netstandard1.4\Entidades.dll
 C:\Users\alumno\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\obj\Debug\netstandard1.4\Entidades.pdb
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\bin\Debug\netstandard1.4\Entidades.deps.json
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\bin\Debug\netstandard1.4\Entidades.dll
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\bin\Debug\netstandard1.4\Entidades.pdb
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\obj\Debug\netstandard1.4\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\obj\Debug\netstandard1.4\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\obj\Debug\netstandard1.4\Entidades.AssemblyInfo.cs
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\obj\Debug\netstandard1.4\Entidades.dll
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\Entidades\obj\Debug\netstandard1.4\Entidades.pdb

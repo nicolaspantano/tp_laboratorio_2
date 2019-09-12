@@ -21,3 +21,5 @@ C:\Users\alumno\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\MiCalculadora\obj\
 C:\Users\alumno\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\MiCalculadora\bin\Debug\Entidades.dll
 C:\Users\alumno\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\MiCalculadora\bin\Debug\Entidades.pdb
 C:\Users\alumno\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\MiCalculadora\obj\Debug\MiCalculadora.csproj.CopyComplete
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\MiCalculadora\bin\Debug\Entidades.dll
+C:\Users\Compumar\Desktop\tp_laboratorio_2\Tp01.Pantano.Nicolas\MiCalculadora\bin\Debug\Entidades.pdb

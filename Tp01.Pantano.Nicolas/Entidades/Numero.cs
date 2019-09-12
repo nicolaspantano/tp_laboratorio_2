@@ -4,6 +4,7 @@ namespace Entidades
 {
     public class Numero
     {
+        
         private double numero;
 
         public Numero() : this(0)
@@ -71,9 +72,13 @@ namespace Entidades
             string binario = "";
 
             int numeroEntero=(int)numero;
-            if (numero == 0)
+            if (numeroEntero == 0)
             {
                 return "0";
+            }
+            else if (numeroEntero < 0)
+            {
+                numeroEntero = numeroEntero * (-1);
             }
 
             while (numeroEntero >= 1)
@@ -102,14 +107,10 @@ namespace Entidades
 
             if (double.TryParse(numero, out convertido))
             {
-                if(convertido < 0)
-                {
-                    return "Valor invalido";
-                }
-                else
-                {                    
+                
+                                    
                     return DecimalBinario(convertido);
-                }
+                
                 
             }
             else
