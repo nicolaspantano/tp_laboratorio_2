@@ -13,6 +13,7 @@ namespace MiCalculadora
 {
     public partial class FormCalculadora : Form
     {
+        #region Metodos
         public FormCalculadora()
         {
             InitializeComponent();
@@ -23,6 +24,24 @@ namespace MiCalculadora
 
         }
 
+        /// <summary>
+        /// Instancia los numeros y los opera
+        /// </summary>
+        /// <param name="numero1">Operando 1</param>
+        /// <param name="numero2">Operando 2</param>
+        /// <param name="operador">Operacion a realizar</param>
+        /// <returns>Retorna el resultado</returns>
+        private static double Operar(string numero1, string numero2, string operador)
+        {
+            Numero num1 = new Numero(numero1);
+            Numero num2 = new Numero(numero2);
+
+            return Calculadora.Operar(num1, num2, operador);
+
+        }
+        #endregion
+
+        #region Botones
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             this.Limpiar();
@@ -46,14 +65,7 @@ namespace MiCalculadora
             lblResultado.Text = (Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text)).ToString(); ;
         }
 
-        private static double Operar(string numero1,string numero2,string operador)
-        {
-            Numero num1 = new Numero(numero1);
-            Numero num2 = new Numero(numero2);
-
-            return Calculadora.Operar(num1, num2, operador);
-
-        }
+        
 
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
@@ -64,5 +76,7 @@ namespace MiCalculadora
         {
             lblResultado.Text = Numero.DecimalBinario(lblResultado.Text);
         }
+        #endregion
+
     }
 }
