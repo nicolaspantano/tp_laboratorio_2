@@ -9,7 +9,7 @@ namespace Entidades_2018
     /// <summary>
     /// No podrá tener clases heredadas.
     /// </summary>
-    public class Changuito
+    public sealed class Changuito
     {
         List<Producto> productos;
         int espacioDisponible;
@@ -34,7 +34,7 @@ namespace Entidades_2018
         /// Muestro el Changuito y TODOS los Productos
         /// </summary>
         /// <returns></returns>
-        public string ToString()
+        public override string ToString()
         {
             return Changuito.Mostrar(this, ETipo.Todos);
         }

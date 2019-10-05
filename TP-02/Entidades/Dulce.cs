@@ -23,10 +23,7 @@ namespace Entidades_2018
             {
                 return 80;
             }
-            set
-            {
-                this.CantidadCalorias = value;
-            }
+            
         }
 
         public override sealed string Mostrar()

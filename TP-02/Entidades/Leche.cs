@@ -37,10 +37,6 @@ namespace Entidades_2018
             {
                 return 20;
             }
-            set
-            {
-                this.CantidadCalorias = value;
-            }
             
         }
 

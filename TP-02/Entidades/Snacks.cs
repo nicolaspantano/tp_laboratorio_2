@@ -19,11 +19,7 @@ namespace Entidades_2018
             get
             {
                 return 104;
-            }
-            set
-            {
-                this.CantidadCalorias = value;
-            }
+            }                      
         }
 
         public override string Mostrar()
