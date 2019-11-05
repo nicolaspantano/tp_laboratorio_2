@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Excepciones;
 
 namespace EntidadesAbstractas
 {
@@ -45,7 +46,18 @@ namespace EntidadesAbstractas
             }
             set
             {
-               this.dni = this.ValidarDni(this.Nacionalidad, value);
+                try
+                {
+                    this.dni = this.ValidarDni(this.Nacionalidad, value);
+                }
+                catch(Excepciones.NacionalidadInvalidaException e)
+                {
+                    throw e;
+                }
+                catch (Excepciones.DniInvalidoException e)
+                {
+                    throw e;
+                }
             }
         }
 
@@ -69,9 +81,7 @@ namespace EntidadesAbstractas
             }
             set
             {
-                this.nombre = this.ValidarNombreApellido(value);
-
-                
+                this.nombre = this.ValidarNombreApellido(value);                
             }
         }
 
@@ -79,8 +89,18 @@ namespace EntidadesAbstractas
         {
             set
             {
-               this.dni = this.ValidarDni(this.Nacionalidad, value);
-              
+                try
+                {
+                    this.dni = this.ValidarDni(this.Nacionalidad, value);
+                }
+                catch(Excepciones.NacionalidadInvalidaException e)
+                {
+                    throw e;
+                }
+                catch(Excepciones.DniInvalidoException e)
+                {
+                    throw e;
+                }
             }
         }
         #endregion
@@ -107,9 +127,9 @@ namespace EntidadesAbstractas
         public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad)
         {
             this.Nombre = nombre;
-            this.Apellido = apellido;
-            this.StringToDNI = dni;
+            this.Apellido = apellido;            
             this.Nacionalidad = nacionalidad;
+            this.StringToDNI = dni;
         }
         #endregion
 
@@ -147,6 +167,37 @@ namespace EntidadesAbstractas
         private int ValidarDni(ENacionalidad nacionalidad,int dato)
         {
             return ValidarDni(nacionalidad, dato.ToString());
+            /*if (nacionalidad == ENacionalidad.Argentino)
+            {
+                if (dato >= 1 && dato <= 89999999)
+                {
+                    return dato;
+                }
+                else
+                {
+                    throw new NacionalidadInvalidaException();
+                }
+            }
+            else if (nacionalidad == ENacionalidad.Extranjero)
+            {
+                if (dato > 89999999 && dato <= 99999999)
+                {
+                    return dato;
+                }
+                else
+                {
+                    throw new NacionalidadInvalidaException();
+                }
+            }
+            else if (dato > 99999999 || dato < 1)
+            {
+                throw new DniInvalidoException();
+            }
+            else
+            {
+                throw new NacionalidadInvalidaException();
+            }*/
+
         }
 
         private int ValidarDni(ENacionalidad nacionalidad,string dato)
@@ -164,11 +215,11 @@ namespace EntidadesAbstractas
             
             aux = Convert.ToInt32(dato);
 
-            if (this.nacionalidad == ENacionalidad.Argentino && aux <= 89999999 && aux >= 1)
+            if (this.Nacionalidad == ENacionalidad.Argentino && aux >= 1 && aux <= 89999999)
             {
                 return aux;
             }
-            else if (this.nacionalidad == ENacionalidad.Extranjero && aux >= 90000000 && aux <= 99999999)
+            else if (this.Nacionalidad == ENacionalidad.Extranjero && aux > 89999999 && aux <= 99999999)
             {
                 return aux;
             }
@@ -176,6 +227,9 @@ namespace EntidadesAbstractas
             {
                 throw new Excepciones.NacionalidadInvalidaException();
             }
+            /*int auxiliar = int.Parse(dato);
+            return ValidarDni(nacionalidad, auxiliar);*/
+
 
         }
 
