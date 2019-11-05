@@ -27,8 +27,7 @@ namespace Main
             try { uni += Universidad.EClases.Programacion; } catch (SinProfesorException e) { Console.WriteLine(e.Message); }
             try { uni += Universidad.EClases.Laboratorio; } catch (SinProfesorException e) { Console.WriteLine(e.Message); }
             try { uni += Universidad.EClases.Legislacion; } catch (SinProfesorException e) { Console.WriteLine(e.Message); }
-            try { uni += Universidad.EClases.SPD; }
-            catch (SinProfesorException e)
+            try { uni += Universidad.EClases.SPD; }        catch (SinProfesorException e)
             { Console.WriteLine(e.Message); }
 
             Console.WriteLine(uni.ToString());

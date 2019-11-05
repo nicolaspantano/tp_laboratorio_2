@@ -158,10 +158,9 @@ namespace EntidadesAbstractas
                 i++;
                 if (char.IsLetterOrDigit(actual) || i > 8)
                 {
-                    throw new Excepciones.DniInvalidoException();                                            
+                    throw new Excepciones.DniInvalidoException();
                 }
             }
-
             
             aux = Convert.ToInt32(dato);
 
