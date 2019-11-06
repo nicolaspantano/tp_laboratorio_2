@@ -47,14 +47,17 @@ namespace TestUnitario
         public void AtributosNull()
         {                        
             Alumno a1 = new Alumno();
-            Assert.IsNotNull(a1.Nombre); 
-            
+            Assert.IsNotNull(a1.DNI);
+            Assert.IsNotNull(a1.Nombre);
+            Assert.IsNotNull(a1.Apellido);            
+            Assert.IsNotNull(a1.Nacionalidad);
+
         }
         [TestMethod]
         public void AtributosInt()
         {
-            Alumno a1 = new Alumno();
-            Assert.IsInstanceOfType(a1.DNI,typeof(int));                    
+            Alumno a1 = new Alumno(1001, "Juan", "Perez", "11111111", Persona.ENacionalidad.Argentino, Universidad.EClases.Laboratorio);
+            Assert.AreEqual(a1.DNI, 11111111);        
         }
     }
 }

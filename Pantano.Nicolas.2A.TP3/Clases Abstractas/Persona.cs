@@ -106,29 +106,28 @@ namespace EntidadesAbstractas
         #endregion
 
         #region Constructores
-        public Persona()
-            //:this("SinNombre","SinApellido","",ENacionalidad.Argentino)
+        public Persona():this("","",ENacionalidad.Argentino)            
         {
 
         }
 
         public Persona(string nombre,string apellido,ENacionalidad nacionalidad)
-            :this(nombre,apellido,"",nacionalidad)
+            
         {
-
+            this.Nombre = nombre;
+            this.Apellido = apellido;
+            this.Nacionalidad = nacionalidad;
         }
 
         public Persona(string nombre, string apellido,int dni,ENacionalidad nacionalidad)
             :this(nombre,apellido,dni.ToString(),nacionalidad)
         {
-            
         }
 
         public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad)
+            :this(nombre,apellido,nacionalidad)
         {
-            this.Nombre = nombre;
-            this.Apellido = apellido;            
-            this.Nacionalidad = nacionalidad;
+           
             this.StringToDNI = dni;
         }
         #endregion
