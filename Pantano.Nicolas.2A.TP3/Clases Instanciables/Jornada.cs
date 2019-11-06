@@ -71,7 +71,7 @@ namespace EntidadesInstanciables
         {
             foreach(Alumno actual in j.Alumnos)
             {
-                if(actual == a)
+                if (actual.DNI == a.DNI)
                 {
                     return true;
                 }
@@ -89,6 +89,10 @@ namespace EntidadesInstanciables
             if (j != a)
             {
                 j.Alumnos.Add(a);
+            }
+            else
+            {
+                throw new Excepciones.AlumnoRepetidoException();
             }
             return j;
         }

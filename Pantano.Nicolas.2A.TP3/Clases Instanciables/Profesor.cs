@@ -28,8 +28,9 @@ namespace EntidadesInstanciables
         public Profesor(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad)
             :base(id,nombre,apellido,dni,nacionalidad)
         {
-            this._randomClases();
             this.clasesDelDia = new Queue<Universidad.EClases>();
+            this._randomClases();
+
         }
         #endregion
 
@@ -79,7 +80,9 @@ namespace EntidadesInstanciables
         }
         protected override string MostrarDatos()
         {
-            return base.MostrarDatos() + this.ParticiparEnClase();
+            StringBuilder sb = new StringBuilder(base.MostrarDatos());
+            sb.AppendLine(this.ParticiparEnClase());
+            return sb.ToString();
         }
 
         public override string ToString()

@@ -137,11 +137,11 @@ namespace EntidadesAbstractas
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("Nombre: ");
-            sb.Append(this.Nombre);
+            sb.Append("NOMBRE COMPLETO: ");
+            sb.Append(this.Apellido);
             sb.Append(", ");
-            sb.AppendLine(this.Apellido);
-            sb.Append("Nacionalidad: ");
+            sb.AppendLine(this.Nombre);
+            sb.Append("NACIONALIDAD: ");
             sb.AppendLine(this.Nacionalidad.ToString());
             sb.Append("DNI: ");
             sb.AppendLine(this.DNI.ToString());
@@ -166,70 +166,48 @@ namespace EntidadesAbstractas
 
         private int ValidarDni(ENacionalidad nacionalidad,int dato)
         {
-            return ValidarDni(nacionalidad, dato.ToString());
-            /*if (nacionalidad == ENacionalidad.Argentino)
-            {
-                if (dato >= 1 && dato <= 89999999)
-                {
-                    return dato;
-                }
-                else
-                {
-                    throw new NacionalidadInvalidaException();
-                }
-            }
-            else if (nacionalidad == ENacionalidad.Extranjero)
-            {
-                if (dato > 89999999 && dato <= 99999999)
-                {
-                    return dato;
-                }
-                else
-                {
-                    throw new NacionalidadInvalidaException();
-                }
-            }
-            else if (dato > 99999999 || dato < 1)
-            {
-                throw new DniInvalidoException();
-            }
-            else
-            {
-                throw new NacionalidadInvalidaException();
-            }*/
-
+            return ValidarDni(nacionalidad, dato.ToString());                       
         }
 
         private int ValidarDni(ENacionalidad nacionalidad,string dato)
         {
-            int i = 0;
-            int aux;            
-            foreach (char actual in dato)
+            int contador=0;
+            foreach(char a in dato)
             {
-                i++;
-                if (char.IsLetterOrDigit(actual) || i > 8)
+                contador++;
+                if (char.IsLetter(a)||char.IsSymbol(a))
                 {
-                    throw new Excepciones.DniInvalidoException();
+                    throw new DniInvalidoException();
                 }
             }
-            
-            aux = Convert.ToInt32(dato);
+            if (contador > 8)
+            {
+                throw new DniInvalidoException();
+            }
 
-            if (this.Nacionalidad == ENacionalidad.Argentino && aux >= 1 && aux <= 89999999)
-            {
-                return aux;
-            }
-            else if (this.Nacionalidad == ENacionalidad.Extranjero && aux > 89999999 && aux <= 99999999)
-            {
-                return aux;
-            }
-            else
-            {
-                throw new Excepciones.NacionalidadInvalidaException();
-            }
-            /*int auxiliar = int.Parse(dato);
-            return ValidarDni(nacionalidad, auxiliar);*/
 
+            int aux = Convert.ToInt32(dato);
+
+            switch (nacionalidad)
+            {
+                case ENacionalidad.Argentino:
+                    if (aux >= 1 && aux <= 89999999)
+                    {
+                        return aux;
+                    }
+                    break;
+
+                case ENacionalidad.Extranjero:
+                    if (aux <= 99999999 && aux >= 90000000)
+                    {
+                        return aux;
+                    }
+                    break;
+
+                default:                    
+                    break;
+            }
+            throw new Excepciones.NacionalidadInvalidaException();                                    
 
         }
 

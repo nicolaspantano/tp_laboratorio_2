@@ -89,7 +89,7 @@ namespace EntidadesInstanciables
             {
                 foreach (Alumno actual in g.Alumnos)
                 {
-                    if (actual == a)
+                    if (actual.DNI == a.DNI)
                     {
                         return true;
                     }

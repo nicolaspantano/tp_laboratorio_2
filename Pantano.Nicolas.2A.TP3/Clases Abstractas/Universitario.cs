@@ -56,8 +56,8 @@ namespace EntidadesAbstractas
         #region Metodos
         protected virtual string MostrarDatos()
         {
-            StringBuilder sb = new StringBuilder(this.ToString());
-            sb.Append("Legajo: ");
+            StringBuilder sb = new StringBuilder(base.ToString());
+            sb.Append("LEGAJO NUMERO: ");
             sb.AppendLine(this.legajo.ToString());
 
             return sb.ToString();

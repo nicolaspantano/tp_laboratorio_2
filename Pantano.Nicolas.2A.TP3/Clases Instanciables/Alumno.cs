@@ -71,11 +71,11 @@ namespace EntidadesInstanciables
 
         protected override string MostrarDatos()
         {
-            StringBuilder sb = new StringBuilder(base.MostrarDatos());
-            sb.Append("Clase que toma: ");
-            sb.AppendLine(this.claseQueToma.ToString());
-            sb.Append("Estado de la cuenta: ");
+            StringBuilder sb = new StringBuilder(base.MostrarDatos());            
+            sb.Append("ESTADOD DE CUENTA: ");
             sb.AppendLine(this.estadoCuenta.ToString());
+            sb.Append("TOMA CLASES DE: ");
+            sb.AppendLine(this.claseQueToma.ToString());
 
             return sb.ToString();
         }
