@@ -107,13 +107,13 @@ namespace EntidadesAbstractas
 
         #region Constructores
         public Persona()
-            :this("SinNombre","SinApellido",null,ENacionalidad.Argentino)
+            //:this("SinNombre","SinApellido","",ENacionalidad.Argentino)
         {
 
         }
 
         public Persona(string nombre,string apellido,ENacionalidad nacionalidad)
-            :this(nombre,apellido,null,nacionalidad)
+            :this(nombre,apellido,"",nacionalidad)
         {
 
         }
@@ -166,6 +166,7 @@ namespace EntidadesAbstractas
 
         private int ValidarDni(ENacionalidad nacionalidad,int dato)
         {
+            
             return ValidarDni(nacionalidad, dato.ToString());                       
         }
 
@@ -187,6 +188,10 @@ namespace EntidadesAbstractas
 
 
             int aux = Convert.ToInt32(dato);
+            if (aux < 1)
+            {
+                throw new DniInvalidoException();
+            }
 
             switch (nacionalidad)
             {
@@ -203,11 +208,9 @@ namespace EntidadesAbstractas
                         return aux;
                     }
                     break;
-
-                default:                    
-                    break;
+                
             }
-            throw new Excepciones.NacionalidadInvalidaException();                                    
+            throw new NacionalidadInvalidaException();                                    
 
         }
 

@@ -60,9 +60,9 @@ namespace EntidadesInstanciables
         #region Metodos
         private void _randomClases()
         {
-            this.clasesDelDia.Enqueue((Universidad.EClases)random.Next(1, 4));
-            this.clasesDelDia.Enqueue((Universidad.EClases)random.Next(1, 4));
-
+            this.clasesDelDia.Enqueue((Universidad.EClases)random.Next(0, 4));
+            this.clasesDelDia.Enqueue((Universidad.EClases)random.Next(0, 4));   
+            
         }
 
         protected override string ParticiparEnClase()

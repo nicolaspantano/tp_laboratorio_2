@@ -16,7 +16,7 @@ namespace EntidadesAbstractas
         public Universitario()
             :base()
         {
-            this.legajo = -1;
+            //this.legajo = -1;
         }
         
         public Universitario(int legajo,string nombre, string apellido, string dni, ENacionalidad nacionalidad)

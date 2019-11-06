@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archivos", "Archivos\Archiv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Main\Main.csproj", "{DE4D22C0-EDAA-4430-9C5B-82F815E5AB61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnitario", "TestUnitario\TestUnitario.csproj", "{C2CC358F-18F2-4A3A-B352-39834DB05B2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DE4D22C0-EDAA-4430-9C5B-82F815E5AB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE4D22C0-EDAA-4430-9C5B-82F815E5AB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE4D22C0-EDAA-4430-9C5B-82F815E5AB61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2CC358F-18F2-4A3A-B352-39834DB05B2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2CC358F-18F2-4A3A-B352-39834DB05B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2CC358F-18F2-4A3A-B352-39834DB05B2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2CC358F-18F2-4A3A-B352-39834DB05B2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

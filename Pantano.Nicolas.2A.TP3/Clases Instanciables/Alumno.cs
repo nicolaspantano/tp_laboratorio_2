@@ -26,7 +26,7 @@ namespace EntidadesInstanciables
         public Alumno()
             :base()
         {
-
+            
         }
 
         public Alumno(int id, string nombre, string apellido, string dni,ENacionalidad nacionalidad, Universidad.EClases claseQueToma)
