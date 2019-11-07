@@ -10,6 +10,7 @@ namespace TestUnitario
     public class UnitTest1
     {
         [TestMethod]
+        
         public void ExpecionAlumnoRepetido()
         {
 

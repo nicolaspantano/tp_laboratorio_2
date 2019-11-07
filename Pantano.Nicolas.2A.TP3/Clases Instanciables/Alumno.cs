@@ -43,6 +43,12 @@ namespace EntidadesInstanciables
         #endregion
 
         #region Sobrecarga de operadores
+        /// <summary>
+        /// Comprueba si el alumno toma una clase dada
+        /// </summary>
+        /// <param name="a">Alumno</param>
+        /// <param name="clase">Clase que deberia tomar</param>
+        /// <returns>Retorna true si el alumno toma la clase</returns>
         public static bool operator ==(Alumno a,Universidad.EClases clase)
         {
             if (a.claseQueToma == clase && a.estadoCuenta != EEstadoCuenta.Deudor)
@@ -52,6 +58,12 @@ namespace EntidadesInstanciables
             return false;
         }
 
+        /// <summary>
+        /// Comprueba si el alumno no toma una clase
+        /// </summary>
+        /// <param name="a">Alumno</param>
+        /// <param name="clase">Clase que no deberia tomar</param>
+        /// <returns>Retorna true si el alumno no toma la clase</returns>
         public static bool operator !=(Alumno a,Universidad.EClases clase)
         {
             if (a.claseQueToma != clase)
@@ -64,11 +76,19 @@ namespace EntidadesInstanciables
         #endregion
 
         #region Metodos
+        /// <summary>
+        /// Hace publicos los datos del Alumno
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return this.MostrarDatos();
         }
 
+        /// <summary>
+        /// Da una descripcion del Alumno
+        /// </summary>
+        /// <returns>Retorna la descripcion en forma de string</returns>
         protected override string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder(base.MostrarDatos());            
@@ -80,6 +100,10 @@ namespace EntidadesInstanciables
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Indica que clase toma el alumno
+        /// </summary>
+        /// <returns>Retorna la informacion en forma de string</returns>
         protected override string ParticiparEnClase()
         {
             return "TOMA CLASE DE: " + this.claseQueToma.ToString();

@@ -9,7 +9,12 @@ using Excepciones;
 namespace Archivos
 {
     public class Xml<T> : IArchivo<T>
-    {
+    {/// <summary>
+    /// Guarda informacion en un archivo .xml
+    /// </summary>
+    /// <param name="archivo">Ruta del archivo</param>
+    /// <param name="datos">Informacion</param>
+    /// <returns></returns>
         public bool Guardar(string archivo, T datos)
         {
             try
@@ -27,7 +32,13 @@ namespace Archivos
             }
         }
 
-         public bool Leer(string archivo, out T datos)
+        /// <summary>
+        /// Lee un archivo .xml
+        /// </summary>
+        /// <param name="archivo">Ruta del archivo</param>
+        /// <param name="datos">Parametro de salida</param>
+        /// <returns></returns>
+        public bool Leer(string archivo, out T datos)
         {
             try
             {

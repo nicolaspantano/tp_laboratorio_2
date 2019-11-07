@@ -133,6 +133,10 @@ namespace EntidadesAbstractas
         #endregion
 
         #region Sobrecargas
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>Retorna la descripcion de la instancia</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -150,6 +154,11 @@ namespace EntidadesAbstractas
         #endregion
 
         #region Metodos
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dato">El nombre a ser validado</param>
+        /// <returns>El dato validado</returns>
         private string ValidarNombreApellido(string dato)
         {
             foreach (char actual in dato)
@@ -162,13 +171,24 @@ namespace EntidadesAbstractas
             return dato;
             
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nacionalidad">Nacionalidad de la persona</param>
+        /// <param name="dato">d}DNI de la persona</param>
+        /// <returns>El dni validado</returns>
         private int ValidarDni(ENacionalidad nacionalidad,int dato)
         {
             
             return ValidarDni(nacionalidad, dato.ToString());                       
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nacionalidad">Nacionalidad de la persona</param>
+        /// <param name="dato">DNI de la persona</param>
+        /// <returns>El dni validado</returns>
         private int ValidarDni(ENacionalidad nacionalidad,string dato)
         {
             int contador=0;

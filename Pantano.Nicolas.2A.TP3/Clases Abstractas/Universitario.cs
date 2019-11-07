@@ -28,11 +28,27 @@ namespace EntidadesAbstractas
         #endregion
 
         #region Sobrecargas
+        /// <summary>
+        /// Compara que ambos objetos sean del mismo tipo
+        /// </summary>
+        /// <param name="obj">objeto a comparar</param>
+        /// <returns>True si son del mismo tipo</returns>
         public override bool Equals(object obj)
         {
-            return base.Equals(obj);
+            if (this.GetType() == obj.GetType())
+            {
+                return true;
+            }
+
+            return false;
         }
 
+        /// <summary>
+        /// Compara dos universitarios
+        /// </summary>
+        /// <param name="pg1">Universitario a comparar</param>
+        /// <param name="pg2">Universitario a comparar</param>
+        /// <returns>Si son iguales, retorna true</returns>
         public static bool operator ==(Universitario pg1, Universitario pg2)
         {
             if (pg1.Equals(pg2))
@@ -46,6 +62,12 @@ namespace EntidadesAbstractas
             return false;
         }
 
+        /// <summary>
+        /// Compara dos universitarios
+        /// </summary>
+        /// <param name="pg1">Universitario a comparar</param>
+        /// <param name="pg2">Universitario a comparar</param>
+        /// <returns>Si son distintos retorna true</returns>
         public static bool operator !=(Universitario pg1, Universitario pg2)
         {
             return !(pg1 == pg2);
@@ -54,6 +76,10 @@ namespace EntidadesAbstractas
         #endregion
 
         #region Metodos
+        /// <summary>
+        /// Da una descripcion del universitario
+        /// </summary>
+        /// <returns>Retorna la descripcion en forma de string</returns>
         protected virtual string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder(base.ToString());

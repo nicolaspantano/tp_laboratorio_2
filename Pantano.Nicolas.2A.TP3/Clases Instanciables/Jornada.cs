@@ -67,6 +67,12 @@ namespace EntidadesInstanciables
         #endregion
 
         #region Sobrecarga de operadores
+        /// <summary>
+        /// Verifica si el alumno esta en la jornada
+        /// </summary>
+        /// <param name="j">La jornada</param>
+        /// <param name="a">El alumno</param>
+        /// <returns>Retorna true si el alumno esta en la jornada</returns>
         public static bool operator ==(Jornada j,Alumno a)
         {
             foreach(Alumno actual in j.Alumnos)
@@ -79,11 +85,23 @@ namespace EntidadesInstanciables
             return false;
         }
 
+        /// <summary>
+        /// Verifica si el alumno no esta en la jornada
+        /// </summary>
+        /// <param name="j">La jornada</param>
+        /// <param name="a">El alumno</param>
+        /// <returns>Retorna true si el alumno esta en la jornada</returns>
         public static bool operator !=(Jornada j, Alumno a)
         {
             return !(j == a);
         }
 
+        /// <summary>
+        /// Añade el alumno a la jornada
+        /// </summary>
+        /// <param name="j">La jornada</param>
+        /// <param name="a">El alumno</param>
+        /// <returns>Retorna la jornada</returns>
         public static Jornada operator +(Jornada j,Alumno a)
         {
             if (j != a)
@@ -99,12 +117,21 @@ namespace EntidadesInstanciables
         #endregion
 
         #region Metodos
+        /// <summary>
+        /// Guarda la informacion en un archivo de texto
+        /// </summary>
+        /// <param name="jornada">Jornada a ser guardada</param>
+        /// <returns>Retorna true si se pudo guardar</returns>
         public static bool Guardar(Jornada jornada)
         {
             Texto texto = new Texto();
             return texto.Guardar("Jornada.txt", jornada.ToString());
         }
 
+        /// <summary>
+        /// Lee un archivo de texto
+        /// </summary>
+        /// <returns>Retorna la informacion</returns>
         public static string Leer()
         {
             string retorno;
@@ -113,6 +140,10 @@ namespace EntidadesInstanciables
             return retorno;
         }
 
+        /// <summary>
+        /// Da informacion de la jornada
+        /// </summary>
+        /// <returns>Devuelve la informacion</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

@@ -83,6 +83,12 @@ namespace EntidadesInstanciables
         #endregion
 
         #region Sobrecarga de operadores
+        /// <summary>
+        /// Comprueba si un alumno va a una universidad
+        /// </summary>
+        /// <param name="g">Universidad</param>
+        /// <param name="a">Alumno</param>
+        /// <returns>Retorna true si el alumno va a esa universidad</returns>
         public static bool operator ==(Universidad g,Alumno a)
         {
             if(!(g.Equals(null))&&!(a is null))
@@ -100,11 +106,23 @@ namespace EntidadesInstanciables
             return false;
         }
 
+        /// <summary>
+        /// Comprueba si un alumno no va a una universidad
+        /// </summary>
+        /// <param name="g">Universidad</param>
+        /// <param name="a">Alumno</param>
+        /// <returns>Retorna true si el alumno no va a esa universidad</returns>
         public static bool operator !=(Universidad g, Alumno a)
         {
             return !(g == a);
         }
 
+        /// <summary>
+        /// Comprueba si un profesor trabaja en una universidad
+        /// </summary>
+        /// <param name="g">Universidad</param>
+        /// <param name="i">Profesor</param>
+        /// <returns>Retorna true si el profesor trabaja en esa universidad</returns>
         public static bool operator ==(Universidad g,Profesor i)
         {
             if(!(g is null)&&!(i is null))
@@ -121,11 +139,23 @@ namespace EntidadesInstanciables
             return false;
         }
 
+        /// <summary>
+        /// Comprueba si un profesor no trabaja en una universidad
+        /// </summary>
+        /// <param name="g">Universidad</param>
+        /// <param name="i">Profesor</param>
+        /// <returns>Retorna true si el profesor no trabaja en esa universidad</returns>
         public static bool operator !=(Universidad g, Profesor i)
         {
             return !(g == i);
         }
 
+        /// <summary>
+        /// Otorga profesor disponile para dar esa clase
+        /// </summary>
+        /// <param name="u">Universidad</param>
+        /// <param name="clase">Clase</param>
+        /// <returns>Retorna el profesor</returns>
         public static Profesor operator ==(Universidad u,EClases clase)
         {                        
                 foreach (Profesor actual in u.Instructores)
@@ -138,6 +168,12 @@ namespace EntidadesInstanciables
                 throw new SinProfesorException();                        
         }
 
+        /// <summary>
+        /// Otorga profesor que no puede dar esa clase
+        /// </summary>
+        /// <param name="u">Universidad</param>
+        /// <param name="clase">Clase</param>
+        /// <returns>Retorna el profesor</returns>
         public static Profesor operator !=(Universidad u, EClases clase)
         {                        
                 foreach(Profesor actual in u.Instructores)
@@ -150,6 +186,12 @@ namespace EntidadesInstanciables
             return null;            
         }
 
+        /// <summary>
+        /// Añade una clase a una universidad
+        /// </summary>
+        /// <param name="g">Universidad</param>
+        /// <param name="clase">Clase</param>
+        /// <returns>Retorna la universidad</returns>
         public static Universidad operator +(Universidad g,EClases clase)
         {
             Jornada j = new Jornada(clase, g == clase);
@@ -165,6 +207,12 @@ namespace EntidadesInstanciables
             return g;            
         }
 
+        /// <summary>
+        /// Añade un alumno a la universidad
+        /// </summary>
+        /// <param name="u">Universidad</param>
+        /// <param name="a">Alumno</param>
+        /// <returns>Retorna la universidad</returns>
         public static Universidad operator +(Universidad u,Alumno a)
         {
             if (u != a)
@@ -188,7 +236,12 @@ namespace EntidadesInstanciables
 
         #endregion
 
-
+        #region Metodos
+        /// <summary>
+        /// Da informacion de la universidad
+        /// </summary>
+        /// <param name="uni">Universidad</param>
+        /// <returns>Retorna la informacion</returns>
         private static string MostrarDatos(Universidad uni)
         {
             StringBuilder sb = new StringBuilder();
@@ -199,11 +252,21 @@ namespace EntidadesInstanciables
 
             return sb.ToString();
         }
+
+        /// <summary>
+        /// Da informacion de la universidad
+        /// </summary>
+        /// <returns>Retorna la informacion</returns>
         public override string ToString()
         {
             return Universidad.MostrarDatos(this);
         }
 
+        /// <summary>
+        /// Guarda la informacion en una archivo .xml
+        /// </summary>
+        /// <param name="uni">Universidad</param>
+        /// <returns>Retorna true si lo pudo guardar</returns>
         public static bool Guardar(Universidad uni)
         {
             Xml<Universidad> xml = new Xml<Universidad>();
@@ -211,6 +274,10 @@ namespace EntidadesInstanciables
                                                     
         }
 
+        /// <summary>
+        /// Lee informacion de un archivo .xml
+        /// </summary>
+        /// <returns>Retorna la informacion</returns>
         public Universidad Leer()
         {
             Universidad uni;
@@ -218,6 +285,7 @@ namespace EntidadesInstanciables
             xml.Leer("Universidad.xml", out uni);
             return uni;
         }
+#endregion
 
     } 
 }

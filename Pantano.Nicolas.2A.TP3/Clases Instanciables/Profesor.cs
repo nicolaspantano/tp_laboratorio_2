@@ -35,6 +35,12 @@ namespace EntidadesInstanciables
         #endregion
 
         #region Sobrecarga de operadores
+        /// <summary>
+        /// Comprueba si el profesor da esa clase
+        /// </summary>
+        /// <param name="i">Profesor</param>
+        /// <param name="clase">Clase</param>
+        /// <returns>Retorna true si la da</returns>
         public static bool operator ==(Profesor i, Universidad.EClases clase)
         {
             if(!(i is null))
@@ -51,6 +57,12 @@ namespace EntidadesInstanciables
             return false;
         }
 
+        /// <summary>
+        /// Comprueba si el profesor no da esa clase
+        /// </summary>
+        /// <param name="i">Profesor</param>
+        /// <param name="clase">Clase</param>
+        /// <returns>Retorna true si no la da</returns>
         public static bool operator !=(Profesor i, Universidad.EClases clase)
         {
             return !(i == clase);
@@ -58,6 +70,9 @@ namespace EntidadesInstanciables
         #endregion
 
         #region Metodos
+        /// <summary>
+        /// Asigna al profesor dos clases aleatorias
+        /// </summary>
         private void _randomClases()
         {
             this.clasesDelDia.Enqueue((Universidad.EClases)random.Next(0, 4));
@@ -65,6 +80,10 @@ namespace EntidadesInstanciables
             
         }
 
+        /// <summary>
+        /// Da informacion de las clases del dia
+        /// </summary>
+        /// <returns>Retorna la informacion</returns>
         protected override string ParticiparEnClase()
         {
             StringBuilder sb = new StringBuilder();
@@ -78,6 +97,10 @@ namespace EntidadesInstanciables
 
             return sb.ToString();
         }
+        /// <summary>
+        /// Da informacion del profesor
+        /// </summary>
+        /// <returns>Retorna la informacion</returns>
         protected override string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder(base.MostrarDatos());
@@ -85,6 +108,10 @@ namespace EntidadesInstanciables
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Da informacion del profesor
+        /// </summary>
+        /// <returns>Retorna la informacion</returns>
         public override string ToString()
         {
             return this.MostrarDatos();
