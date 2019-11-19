@@ -73,12 +73,7 @@ namespace MainCorreo
                 MessageBox.Show(f.Message);
             }
 
-        }
-
-        private void FrmPpal_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            this.correo.FinEntregas();
-        }
+        }       
 
         private void btnMostrarTodos_Click(object sender, EventArgs e)
         {
@@ -97,6 +92,11 @@ namespace MainCorreo
         private void mostrarToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.MostrarInformacion<Paquete>((IMostrar<Paquete>)lstEstadoEntregado.SelectedItem);
+        }
+
+        private void FrmPpal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.correo.FinEntregas();
         }
     }
 }
