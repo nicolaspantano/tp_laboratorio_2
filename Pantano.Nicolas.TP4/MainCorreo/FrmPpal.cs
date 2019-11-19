@@ -87,14 +87,14 @@ namespace MainCorreo
 
         private void MostrarInformacion<T>(IMostrar<T> elemento)
         {
-            if (!(elemento.Equals(null)))
+            if (!(object.Equals(elemento,null)))
             {
                 this.rtbMostrar.Text = elemento.MostrarDatos(elemento) + "\n";
                 GuardaString.Guardar(this.rtbMostrar.Text, "salida.txt");
             }
         }
-
-        private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)
+     
+        private void mostrarToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.MostrarInformacion<Paquete>((IMostrar<Paquete>)lstEstadoEntregado.SelectedItem);
         }
