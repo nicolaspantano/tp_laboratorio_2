@@ -56,7 +56,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return this.MostrarDatos(this) + " Estado: "+this.Estado.ToString();
+            return this.MostrarDatos(this);
         }
 
         public void MockCicloDeVida()
@@ -64,7 +64,7 @@ namespace Entidades
             while (this.Estado != EEstado.Entregado)
             {
                 Thread.Sleep(4000);
-                this.estado++;
+                this.Estado++;
                 this.InformaEstado(this, new EventArgs());
             }
 

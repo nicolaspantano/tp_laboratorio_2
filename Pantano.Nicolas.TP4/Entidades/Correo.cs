@@ -41,9 +41,9 @@ namespace Entidades
         public string MostrarDatos(IMostrar <List<Paquete>> elementos)
         {
             StringBuilder sb = new StringBuilder();
-            foreach (Paquete a in ((Correo)elementos).Paquetes)
+            foreach (Paquete p in ((Correo)elementos).Paquetes)
             {
-                sb.AppendLine(a.ToString());
+                sb.AppendLine(string.Format("{0} para {1} ({2})", p.TrackingID,p.DireccionEntrega, p.Estado.ToString()));
             }
 
             return sb.ToString();
