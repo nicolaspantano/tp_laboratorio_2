@@ -20,9 +20,23 @@ namespace Entidades
             this.Paquetes = new List<Paquete>();
         }
 
+        /// <summary>
+        /// Agrega un pauete al correo si no lo contiene ya
+        /// </summary>
+        /// <param name="c">Correo</param>
+        /// <param name="p">Paquete</param>
+        /// <returns>retorna el correo</returns>
         public static Correo operator +(Correo c, Paquete p)
         {
-            if (!(c.Paquetes.Contains(p)))
+            bool loContiene = false;
+            foreach (Paquete a in c.Paquetes)
+            {
+                if (a == p)
+                {
+                    loContiene = true;
+                }
+            }
+            if(loContiene==false)
             {
                 c.Paquetes.Add(p);
                 Thread hilo = new Thread(p.MockCicloDeVida);
@@ -32,12 +46,17 @@ namespace Entidades
             }
             else
             {
-                throw new TrackingIdRepetidoException("Ocurrio un error al agregar el paquete al correo");
+                throw new TrackingIdRepetidoException("El tracking ID "+p.TrackingID + " ya figura en la lista de envios");
             }            
 
             
         }
 
+        /// <summary>
+        /// Retorna los datos de una lista de paquetes
+        /// </summary>
+        /// <param name="elementos">Lista de paquetes</param>
+        /// <returns>Retorna los datos</returns>
         public string MostrarDatos(IMostrar <List<Paquete>> elementos)
         {
             StringBuilder sb = new StringBuilder();
@@ -49,6 +68,9 @@ namespace Entidades
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Termina todos los hilos en ejecucion
+        /// </summary>
         public void FinEntregas()
         {
             foreach(Thread a in this.mockPaquetes)

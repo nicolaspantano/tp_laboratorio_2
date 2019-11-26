@@ -21,6 +21,9 @@ namespace MainCorreo
             this.correo = new Correo();
         }
 
+        /// <summary>
+        /// Actualiza las listbox
+        /// </summary>
         private void ActualizarEstados()
         {
             this.lstEstadoEntregado.Items.Clear();
@@ -46,6 +49,11 @@ namespace MainCorreo
             }
         }
 
+        /// <summary>
+        /// LLama al metodo de actualizarestados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void paq_InformaEstado(object sender, EventArgs e)
         {
             if (this.InvokeRequired)
@@ -59,6 +67,11 @@ namespace MainCorreo
             }
         }
 
+        /// <summary>
+        /// Agrega un paquete
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             try
@@ -73,27 +86,47 @@ namespace MainCorreo
                 MessageBox.Show(f.Message);
             }
 
-        }       
-
-        private void btnMostrarTodos_Click(object sender, EventArgs e)
-        {
-            this.MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)correo);
         }
 
+        /// <summary>
+        /// Muestra la informacion de todos los paquets
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnMostrarTodos_Click(object sender, EventArgs e)
+        {
+            this.MostrarInformacion(this.correo);
+        }
+
+        /// <summary>
+        /// Muestra la informacion de un paquete
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="elemento"></param>
         private void MostrarInformacion<T>(IMostrar<T> elemento)
         {
             if (!(object.Equals(elemento,null)))
             {
-                this.rtbMostrar.Text = elemento.MostrarDatos(elemento) + "\n";
-                GuardaString.Guardar(this.rtbMostrar.Text, "salida.txt");
+                this.rtbMostrar.Text = elemento.MostrarDatos(elemento) + "\n";               
+                this.rtbMostrar.Text.Guardar("salida.txt");
             }
         }
-     
+
+        /// <summary>
+        /// Muestra la informacion de un paquete
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void mostrarToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.MostrarInformacion<Paquete>((IMostrar<Paquete>)lstEstadoEntregado.SelectedItem);
         }
 
+        /// <summary>
+        /// Al cerrarse la aplicacion, se abortan todos los hilos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmPpal_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.correo.FinEntregas();

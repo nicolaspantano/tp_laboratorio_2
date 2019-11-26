@@ -30,6 +30,12 @@ namespace Entidades
             this.TrackingID = trackingID;
         }
 
+        /// <summary>
+        /// Dos paquetes seran iguales si tienen el mismo Tracing ID
+        /// </summary>
+        /// <param name="p1">Paquete 1</param>
+        /// <param name="p2">Paquete 2</param>
+        /// <returns>Retorna true si son iguales</returns>
         public static bool operator ==(Paquete p1, Paquete p2)
         {
             if (!(p1.Equals(null) && !(p2.Equals(null))))
@@ -43,22 +49,40 @@ namespace Entidades
             return false;
         }
 
+        /// <summary>
+        /// Dos paquetes seran distintos si tienen diferentes TrackingID
+        /// </summary>
+        /// <param name="p1">Paquete 1</param>
+        /// <param name="p2">Paquete 2</param>
+        /// <returns>Retorna true si son distintos</returns>
         public static bool operator !=(Paquete p1,Paquete p2)
         {
             return !(p1 == p2);
         }
 
+        /// <summary>
+        /// Retorna los datos de un paquete
+        /// </summary>
+        /// <param name="elemento">Paquete a mostrar</param>
+        /// <returns>Retorna los datos</returns>
         public string MostrarDatos(IMostrar<Paquete> elemento)
         {
             return String.Format("{0} para {1}", ((Paquete)elemento).trackingID, ((Paquete)elemento).direccionEntrega);          
             
         }
 
+        /// <summary>
+        /// Retorna los datos de un paquete
+        /// </summary>
+        /// <returns>Retorna los datos</returns>
         public override string ToString()
         {
             return this.MostrarDatos(this);
         }
 
+        /// <summary>
+        /// Cambia el estado del paquete a travez de hilos
+        /// </summary>
         public void MockCicloDeVida()
         {
             while (this.Estado != EEstado.Entregado)
