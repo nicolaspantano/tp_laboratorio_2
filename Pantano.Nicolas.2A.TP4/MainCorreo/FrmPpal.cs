@@ -64,8 +64,8 @@ namespace MainCorreo
             try
             {
                 Paquete p = new Paquete(this.txtDireccion.Text, this.mtxtTrackingID.Text);
-                p.InformaEstado += new Paquete.DelegadoEstado(this.paq_InformaEstado);
                 this.correo += p;
+                p.InformaEstado += new Paquete.DelegadoEstado(this.paq_InformaEstado);
                 this.ActualizarEstados();
             }
             catch(TrackingIdRepetidoException f)
