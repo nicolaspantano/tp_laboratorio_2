@@ -26,7 +26,7 @@ namespace Entidades
                 PaqueteDAO.comando.CommandType = CommandType.Text;
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 throw new Exception("Ocurrio un error al conectar con la base de datos");
             }
@@ -49,7 +49,7 @@ namespace Entidades
                 PaqueteDAO.conexion.Close();
                 return true;
             }
-            catch(Exception e)
+            catch(Exception)
             {
                 throw new Exception("Ocurrio un error al insertar el paquete en la base de datos");
             }
